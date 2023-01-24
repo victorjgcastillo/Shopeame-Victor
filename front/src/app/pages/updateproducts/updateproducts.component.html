@@ -1,0 +1,21 @@
+<form [formGroup]="productForm" (ngSubmit)="onSubmit()">
+  <h5>Nombre del Producto:</h5>
+  <input formControlName = "name" placeholder="Por ej. Lampara de escritorio">
+  <h5>Precio:</h5>
+  <input formControlName = "price" placeholder="Por ej. $20">
+  <h5>Descripcion:</h5>
+  <input formControlName = "description" placeholder="Por ej. Exelente para tu iluminar a la hora de estudiar">
+  <h5>Ruta de la Imagen:</h5>
+  <input formControlName = "image" placeholder="Por ej. http://ejemplo.com/img.jpg">
+  <h5>Opiniones</h5>
+  <input formControlName = "stars" placeholder="Por ej. 4.28">
+<div class="buttonG">
+  <button type="submit">Guardar Cambios</button>
+</div>
+
+
+</form>
+
+<img src="{{updateProduct.image}}" alt="{{updateProduct.name}}">
+<p>{{updateProduct.description}}</p>
+<h2>{{updateProduct.price}}</h2>

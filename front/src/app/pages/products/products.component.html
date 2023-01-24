@@ -1,0 +1,24 @@
+<div class="allproduct">
+
+  <div class="input">
+  <input type="text" #filtro (input)="filtrarProducto(filtro.value)">
+</div>
+
+  <div class="products">
+
+
+    <div *ngFor="let product of paintedProduct">
+      <img src="{{product.image}}" alt="{{product.name}}">
+      <p>{{product.description}}</p>
+      <h2>${{product.price}}</h2>
+      <div class="button-star">
+        <a href="">{{product.stars}}</a>
+        <button routerLink="/updateProducts/{{product.id}}">editar</button>
+      </div>
+
+    </div>
+
+  </div>
+
+</div>
+
